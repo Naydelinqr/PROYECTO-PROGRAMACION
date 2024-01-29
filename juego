@@ -11,6 +11,23 @@ class JuegoAdivinaNumero:
             return "Demasiado bajo. Intenta de nuevo."
         else:
             return "Demasiado alto. Intenta de nuevo."
+        
+def obtener_dificultad():
+    while True:
+        dificultad = input("Elige la dificultad (fácil/difícil): ").lower()
+        if dificultad in ['fácil', 'difícil']:
+            return dificultad
+        else:
+            print("Por favor, ingresa 'fácil' o 'difícil'.")
+
+# Obtener la dificultad del juego
+dificultad_elegida = obtener_dificultad()
+
+# Establecer el rango de números según la dificultad
+rango_superior = 100 if dificultad_elegida == 'fácil' else 1000
+
+# Generar un número secreto aleatorio dentro del rango
+numero_secreto = random.randint(1, rango_superior)
 
 # Generar un número secreto aleatorio entre 1 y 100
 numero_secreto = random.randint(1, 100)
