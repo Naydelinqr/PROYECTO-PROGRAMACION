@@ -24,7 +24,7 @@ def obtener_nombre_usuario():
     return nombre
 
 nombre_usuario = obtener_nombre_usuario()
-print(f"Hola {nombre_usuario}, vamos a jugar a adivinar el número XD!")
+print(f"Hola {nombre_usuario}, vamos a jugar a adivinar un número! XD")
 
 # Obtener la dificultad del juego
 dificultad_elegida = obtener_dificultad()
@@ -46,3 +46,6 @@ while True:
     print(resultado)
     if intento == juego.numero_secreto:
         break
+
+#Despedida
+print(f"\n¡Gracias por jugar, {nombre_usuario}!\no⁠(⁠(⁠ˊ⁠ᵕ⁠ˋ⁠⁠)⁠)⁠o")
